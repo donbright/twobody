@@ -1,0 +1,81 @@
+
+1. 
+
+grasping code.
+it will not compile.
+java has a bunch of stuff deprecated.
+remind self to aavoid deprecation if i ever design a language
+
+not sure if i understand the math fully.
+
+
+the design of Orbits code is old school. no 'separation between calculations
+and presentation' going on here. its all together, like energyPlot.java
+in fact i'd go so far as saying... it's a hot mess? functions are too long
+and do too many things and are confusing. calculation and presentation
+is completely commingled in the same code.
+
+going through each file.
+
+stage one is building the math engine
+to the point it can spit out ascii decimal coordinates
+
+stage two will be making a graphics on top of that.
+but it should be as separate as possible. 
+
+according to the design principle which i am folllowing (separate
+calculations and engine work from the presentation of the results,
+within code .. modularity breaks down that way in this design philosophy)
+
+
+trying to avoid square roots , per the Wildberger approach to math
+(this has helped me before, see the blog post i did on 
+calculating very simple general relativity time dilation based on gravity)
+
+
+attempting to port.... the logic and ideas. not porting the code directly
+except for math stuff. 
+
+example - marking the apihelion is done in the middle of painting
+and it modifies the particle position. complete commingling of graphics
+display with calculation. 
+
+
+ 4/21
+
+safe to say this code is realy, really not following any kind
+of modular programming philosophy. 
+
+this is the funny thing about java.... a program with no 
+kind of organization or structure is a hot mess no matter what
+language. there are assembly language programs that are easy
+to understand and follow.... then there are java programs
+that are nearly impossible to follow the logic of. like this one. 
+
+and the main problem is that there is not any real breakdown
+of different operations into different functions. 
+graphics, calculation, etc, are all in a single paintWindow function.
+lines are totally mixed together. 
+
+makes it hard to understand, harder to port. 
+
+shows the gap between disciplines in modern life. wikipedia
+articles on math are full of impenetrable jargon, and physics
+is the same. the sections on general relativity orbits
+are impossible to understand - they show equations withuot
+fully describing the variable names. they just assume you know. 
+
+people will argue its because they are smart and the reader is dumb.
+not helpful. not necessary. fact is that the best in a field are also
+sometimes the kindest and least judgemental of outsiders. and some are
+even very good communicators.
+
+shows the need for teamwork between programming world and physics world. 
+physics phd might know nothing about organizing a program cearly, but 
+programmers know nothing about the physics and math equations that are
+being discussed or the theories behind them.
+
+by bridging the gap somehow something more than sum of its parts is
+created. hopefully. and the two different people learn what the other
+is talking about, how to understand their perspective. 
+
